@@ -260,8 +260,10 @@ ODS \emph{F-measure} & 0.788 & 0.806 & 0.820 & 0.807 & 0.787 \\
 \section{实验}
 \label{sec:experiments}
 
-\subsection{Datasets and Implementation}
 \noindent \textbf{Experimental Datasets.} \quad We evaluate the proposed PiDiNet on three widely used datasets, namely, BSDS500~\cite{arbelaez2010bsds}, NYUD~\cite{shi2000nyud}, and Multicue~\cite{mely2016multicue}. The experimental settings about data augmentation and configuration on the three datasets follow~\cite{xie2017holistically,liu2019richer,he2019bidirectional} and the details are given below. BSDS500 consists of 200, 100, and 200 images in the training set, validation set, and test set respectively. Each image has 4 to 9 annotators. Training images in the dataset are augmented with flipping (2$\times$), scaling (3$\times$), and rotation (16$\times$), leading to a training set that is 96$\times$ larger than the unaugmented version. Like prior works~\cite{xie2017holistically,liu2019richer,he2019bidirectional}, the PASCAL VOC Context dataset~\cite{mottaghi2014voc}, which has 10K labeled images (and augmented to 20K with flipping), is also optionally considered in training. NYUD has 1449 pairs of aligned RGB and depth images which are densely labeled. There are 381, 414 and 654 images for training, validation, and test respectively. We combine the training and validation set and augment them with flipping (2$\times$), scaling (3$\times$), and rotation (4$\times$) to produce the training data. Multicue is composed of 100 challenging natural scenes and each scene contains a left- and right-view color sequences captured by a binocular stereo camera. The last frame of left-view sequences for each scene, which is labeled with edges and boundaries, is used in our experiments. We randomly split them to 80 and 20 images for training and evaluation respectively. The process is independently repeated twice more. The metrics are then recorded from the three runs. We also augment each training image with flipping (2$\times$), scaling (3$\times$), and rotation ($16\times$), then randomly crop them with size 500$\times$500. 
+% \subsection{Datasets and Implementation}
+\subsection{数据集及实现}
+
 
 
 \vspace{0.3em}
