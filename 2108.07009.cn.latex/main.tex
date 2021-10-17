@@ -201,8 +201,8 @@ ODS \emph{F-measure} & 0.788 & 0.806 & 0.820 & 0.807 & 0.787 \\
 \end{figure}
 
 \vspace{0.3em}
-\noindent \textbf{Converting PDC to Vanilla Convolution.} \quad
-According to Eq.~\ref{eq: pdc}, one may notice that the computational cost and memory footprint by PDC are doubled compared with the vanilla counterpart. However, once the convolution kernels have been learnt, PDC layers can be converted to vanilla convolutional layers by instead saving the differences of the kernel weights in the model, according to the locations of the selected pixel pairs. In this way, the efficiency is maintained during inference. Taking APDC as an example (Fig.~\ref{fig:apdc}), conversion is done with the following equations:
+% \noindent \textbf{Converting PDC to Vanilla Convolution.} \quad According to Eq.~\ref{eq: pdc}, one may notice that the computational cost and memory footprint by PDC are doubled compared with the vanilla counterpart. However, once the convolution kernels have been learnt, PDC layers can be converted to vanilla convolutional layers by instead saving the differences of the kernel weights in the model, according to the locations of the selected pixel pairs. In this way, the efficiency is maintained during inference. Taking APDC as an example (Fig.~\ref{fig:apdc}), conversion is done with the following equations:
+\noindent \textbf{将PDC转换为普通卷积。} \quad 根据Eq. ~\ref{eq: pdc}，人们可能会注意到PDC的计算成本和内存占用量与普通版本相比高出一倍。但是，一旦学习了卷积核，就可以根据所选像素对的位置，通过在模型中保存卷积核权重的差分，将PDC层转换为普通卷积层。这样，在推理过程中保持了效率。以APDC为例（Fig. ~\ref{fig:apdc}），转换是通过以下等式完成的：
 {\small 
 \begin{align}
     y &= w_{1}\cdot (x_1 - x_2) + w_2\cdot (x_2 - x_3)+w_3\cdot (x_3 - x_6) + ... \nonumber\\
