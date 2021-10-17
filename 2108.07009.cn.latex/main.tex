@@ -252,7 +252,8 @@ ODS \emph{F-measure} & 0.788 & 0.806 & 0.820 & 0.807 & 0.787 \\
     \beta\cdot \log p_i^j &\text{otherwise},
     \end{cases}
 \end{equation}}
-where $y_i$ is the ground truth edge probability, $\eta$ is a pre-defined threshold, meaning that a pixel is discarded and not considered to be a sample when calculating the loss if it is marked as positive by fewer than $\eta$ of annotators to avoid confusing, $\beta$ is the percentage of negative pixel samples and $\alpha = \lambda\cdot (1-\beta)$. After all, the total loss is $L = \sum_{i,j}l_i^j$.
+% where $y_i$ is the ground truth edge probability, $\eta$ is a pre-defined threshold, meaning that a pixel is discarded and not considered to be a sample when calculating the loss if it is marked as positive by fewer than $\eta$ of annotators to avoid confusing, $\beta$ is the percentage of negative pixel samples and $\alpha = \lambda\cdot (1-\beta)$. After all, the total loss is $L = \sum_{i,j}l_i^j$.
+其中$ y_i $是真实值边缘概率，$ \eta $是一个预定义的阈值，这意味着如果一个像素被少于$ \eta $的注释器标记为正以避免混淆，则该像素将被丢弃，且不被视为样本，$ \beta $是负像素样本的百分比，$ \alpha = \lambda \cdot (1 - \beta) $。总之，总损失是$ L = \sum_{i,j} l_i^j $。
 
 
 \section{Experiments}
