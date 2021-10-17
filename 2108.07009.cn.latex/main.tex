@@ -243,7 +243,8 @@ ODS \emph{F-measure} & 0.788 & 0.806 & 0.820 & 0.807 & 0.787 \\
 详细的结构信息可以在Fig. ~\ref{fig:arch}中看到，注意为了简单起见，我们没有使用任何归一化层，因为训练图像的分辨率不统一。获得的架构是我们的基线。通过用PDC替换残差块中$ 3 \times 3 $深度卷积层中的普通卷积，我们得到了提议的PiDiNet。
 
 \vspace{0.3em}
-\noindent \textbf{Loss Function.} \quad We adopt the annotator-robust loss function proposed in~\cite{liu2019richer} for each generated edge map (including the final edge map). For the $i$th pixel in the $j$th edge map with value $p_i^j$, the loss is calculated as:
+% \noindent \textbf{Loss Function.} \quad We adopt the annotator-robust loss function proposed in~\cite{liu2019richer} for each generated edge map (including the final edge map). For the $i$th pixel in the $j$th edge map with value $p_i^j$, the loss is calculated as:
+\noindent \textbf{损失函数。} \quad 我们采用~\cite{liu2019richer}中提出的注释器鲁棒损失函数用于每个生成的边缘图（包括最终的边缘图）。对于第$ j $个边缘图中值为$ p_i^j $的第$ i $个像素，损失计算如下：
 {\small \begin{equation}
     l_i^j = \begin{cases} 
     \alpha\cdot \log (1 - p_i^j) &\text{if } y_i  = 0 \\
