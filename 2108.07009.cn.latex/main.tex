@@ -146,7 +146,8 @@ ODS \emph{F-measure} & 0.788 & 0.806 & 0.820 & 0.807 & 0.787 \\
 开发轻量级结构以在边缘检测的准确性和效率之间实现更好的权衡非常重要。通过像素差分卷积，受~\cite{he2016residual, howard2017mobilenets}的启发，我们构建了一种新的端到端架构，即像素差分网络（PiDiNet）以一次性解决上述问题。具体来说，PiDiNet由一个高效的主干和一个高效的特定任务侧结构组成（见Fig. ~\ref{fig:arch}），能够高效地进行稳健而准确的边缘检测。
 
 
-\section{Related Work}
+% \section{Related Work}
+\section{相关工作}
 
 
 \noindent \textbf{Using Traditional Edge Detectors to Help Deep CNN Models for Edge Detection.} \quad Canny~\cite{canny1986computational} and SE~\cite{dollar2014se} edge detectors are usually used to extract candidate contour points before applying the CNN model for contour/non-contour prediction~\cite{bertasius2015deepedge, bertasius2015hfl}. The candidate points can be also used as auxiliary relaxed labels for better training the CNN model~\cite{liu2016relaxed}. Instead of relying on the edge information from the hand-crafted detectors, PDC directly integrates the gradient information extraction process into the convolutional operation, which is more compact and learnable.
