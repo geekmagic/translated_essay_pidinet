@@ -174,7 +174,8 @@ ODS \emph{F-measure} & 0.788 & 0.806 & 0.820 & 0.807 & 0.787 \\
     \label{fig:pdc}
 \end{figure}
 
-The process of pixel difference convolution (PDC) is pretty similar to that of vanilla convolution, where the original pixels in the local feature map patch covered by the convolution kernels are replaced by pixel differences, when conducting the convolutional operation. The formulations of vanilla convolution and PDC can be written as:
+% The process of pixel difference convolution (PDC) is pretty similar to that of vanilla convolution, where the original pixels in the local feature map patch covered by the convolution kernels are replaced by pixel differences, when conducting the convolutional operation. The formulations of vanilla convolution and PDC can be written as:
+像素差分卷积（PDC）的过程与普通卷积非常相似，在进行卷积运算时，卷积核覆盖的局部特征图补丁中的原始像素被像素差分替换。普通卷积和PDC的公式可以写成：
 \begin{align}
     y &= f(\pmb{x}, \pmb{\theta}) = \sum_{i=1}^{k\times k}w_{i}\cdot x_{i}, \;\;\;\;\;\;\; \text{(vanilla convolution)} \\
     y &= f(\triangledown\pmb{x}, \pmb{\theta}) = \sum_{(x_i, x_i')\in \pmb{\mathcal{P}}}w_{i}\cdot (x_i - x_i'), \;\;\;\;\;\;\, \text{(PDC)} \label{eq: pdc}
